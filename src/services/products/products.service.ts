@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import path from 'path';
 import { Product } from 'src/entity/product.entity';
-import { Repository } from 'typeorm';
+import { DeleteResult, Repository } from 'typeorm';
 import { UpdateResult } from 'typeorm/driver/mongodb/typings';
 
 @Injectable()
@@ -27,4 +27,10 @@ export class ProductsService {
     // async update(id: string, updateProductDto: UpdateProductDto,): Promise<UpdateResult> {
     //     return await this.productsRepository.update(id, updateProductDto);
     // }
+
+    async remove(id: string): Promise<DeleteResult> {
+        return await this.productsRepository.softDelete(id);
+    }
+
+    
 }
