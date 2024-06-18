@@ -1,4 +1,4 @@
 // import { Entity } from 'typeorm';
 
 // @Entity('Product')
-export class Product {}
+export class Products {}
