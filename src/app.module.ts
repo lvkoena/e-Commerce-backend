@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductController } from './controllers/products/products.controller';
-import { ProductModule } from './modules/product/products.module';
+import { ProductModule } from './modules/products/products.module';
 import { ProductService } from './services/products/product.service';
 
 @Module({
