@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductController } from './controllers/products/products.controller';
 import { ProductModule } from './modules/products/products.module';
-import { ProductService } from './services/products/product.service';
+import { ProductService } from './services/products/products.service';
 
 @Module({
   imports: [ProductModule],

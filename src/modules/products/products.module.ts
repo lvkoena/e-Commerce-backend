@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ProductService } from 'src/services/products/product.service';
+import { ProductService } from 'src/services/products/products.service';
 // import { TypeOrmModule } from 'typeorm';
 
 
