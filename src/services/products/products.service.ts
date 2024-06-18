@@ -32,5 +32,7 @@ export class ProductsService {
         return await this.productsRepository.softDelete(id);
     }
 
-    
+    async checkIfProductsExist(productIds: string[]): Promise<Product[]> {
+        return await this.productsRepository.findByIds(productIds);
+    }
 }
