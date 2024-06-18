@@ -1,4 +1,10 @@
-// import { Entity } from 'typeorm';
+import { Entity } from 'typeorm';
 
-// @Entity('Product')
-export class Product {}
+@Entity('products')
+export class Product {
+    constructor(initialData: Partial<Product> = null) {
+        if (initialData !== null) {
+            Object.assign(this, initialData)
+        }
+    }
+}

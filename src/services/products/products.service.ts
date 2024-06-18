@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import path from 'path';
 import { Product } from 'src/entity/product.entity';
-import { DeleteResult, Repository } from 'typeorm';
-import { UpdateResult } from 'typeorm/driver/mongodb/typings';
+import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 
 @Injectable()
 export class ProductsService {
