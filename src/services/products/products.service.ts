@@ -10,21 +10,21 @@ export class ProductsService {
         @InjectRepository(Product)
         private readonly productsRepository: Repository<Product>,) {}
 
-    // async create(createProductDto: CreateProductDto): Promise<Product> {
-    //     return await this.productsRepository.save(createProductDto);
-    // }
+    async create(createProductDto: CreateProductDto): Promise<Product> {
+        return await this.productsRepository.save(createProductDto);
+    }
 
     async findAll(): Promise<Product[]> {
         return await this.productsRepository.find();
     }
 
-    // async findOne(id: string): Promise<Product> {
-    //     return await this.productsRepository.findOne(id);
-    // }
+    async findOne(id: string): Promise<Product> {
+        return await this.productsRepository.findOne(id);
+    }
 
-    // async update(id: string, updateProductDto: UpdateProductDto,): Promise<UpdateResult> {
-    //     return await this.productsRepository.update(id, updateProductDto);
-    // }
+    async update(id: string, updateProductDto: UpdateProductDto,): Promise<UpdateResult> {
+        return await this.productsRepository.update(id, updateProductDto);
+    }
 
     async remove(id: string): Promise<DeleteResult> {
         return await this.productsRepository.softDelete(id);
